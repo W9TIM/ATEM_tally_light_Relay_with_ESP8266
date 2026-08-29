@@ -1,6 +1,9 @@
 /*
-    Copyright (C) 2023 Aron N. Het Lam, aronhetlam@gmail.com
 
+    ON MAC USE ESP8266 BOARD VERSION 3.02               (DO NOT UPDATE!) (TS 3-27-24)
+    REMOVED ALL COMPILE MACRO REFERENCES / USE OF TALLY_TEST_SERVER CODE (TS 3-27-24)
+    REMOVE LED2 SUPPORT (NOT NEEDED FOR RELAY CONTROL VERSION)           (TS 3-27-24) 
+    
     This program makes an ESP8266 into a wireless tally light system for ATEM switchers,
     by using Kasper Skårhøj's (<https://skaarhoj.com>) ATEM client libraries for Arduino.
 
@@ -16,6 +19,8 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    Portions Copyright (C) 2023 Aron N. Het Lam, aronhetlam@gmail.com
+
 */
 
 #include "Arduino.h"

@@ -50,11 +50,13 @@ Base: forked from [AronHetLam/ATEM_tally_light_with_ESP8266](https://github.com/
 - **`TALLY_TEST_SERVER` code paths** — 2024-03-27. All compile-time branches
   for the local tally test-server mode were removed from
   `ATEM_tally_light.cpp`/`.hpp`; this fork's main sketch always builds
-  against a live ATEM connection. Note: `platformio.ini` still defines
-  `*_test_server` build environments that pass `-D TALLY_TEST_SERVER` — since
-  the source no longer branches on that macro, those environments now just
-  build identical firmware to their non-test-server counterparts. Harmless,
-  but worth pruning from `platformio.ini` at some point.
+  against a live ATEM connection.
+- **`*_test_server` PlatformIO environments** — 2026-08-29. Since the source
+  no longer branches on `TALLY_TEST_SERVER`, the `ESP8266_test_server`,
+  `ESP32_test_server`, `ESP32_C3_test_server`, `ESP32_S2_test_server`,
+  `ESP32_S3_test_server`, and `ATOM_Matrix_test_server` environments in
+  `platformio.ini` were building firmware identical to their non-test-server
+  counterparts, so they've been pruned. `default_envs` was updated to match.
 
 ### Build / environment notes
 - **macOS toolchain pin** — 2024-03-27. Build with **ESP8266 board package
